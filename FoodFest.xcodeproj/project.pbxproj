@@ -13,8 +13,9 @@
 		F99E25A626D6689A00EF20FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99E25A426D6689A00EF20FA /* Main.storyboard */; };
 		F99E25A826D6689B00EF20FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99E25A726D6689B00EF20FA /* Assets.xcassets */; };
 		F99E25AB26D6689B00EF20FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99E25A926D6689B00EF20FA /* LaunchScreen.storyboard */; };
-		F99E25B626D6689B00EF20FA /* FoodFestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25B526D6689B00EF20FA /* FoodFestTests.swift */; };
 		F99E25C126D6689B00EF20FA /* FoodFestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25C026D6689B00EF20FA /* FoodFestUITests.swift */; };
+		F99E25D526D668F700EF20FA /* FoodStructTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25D426D668F700EF20FA /* FoodStructTests.swift */; };
+		F99E25DA26D669B300EF20FA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25D926D669B300EF20FA /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,12 @@
 		F99E25AA26D6689B00EF20FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F99E25AC26D6689B00EF20FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F99E25B126D6689B00EF20FA /* FoodFestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodFestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F99E25B526D6689B00EF20FA /* FoodFestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFestTests.swift; sourceTree = "<group>"; };
 		F99E25B726D6689B00EF20FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F99E25BC26D6689B00EF20FA /* FoodFestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodFestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99E25C026D6689B00EF20FA /* FoodFestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFestUITests.swift; sourceTree = "<group>"; };
 		F99E25C226D6689B00EF20FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99E25D426D668F700EF20FA /* FoodStructTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStructTests.swift; sourceTree = "<group>"; };
+		F99E25D926D669B300EF20FA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		F99E259D26D6689A00EF20FA /* FoodFest */ = {
 			isa = PBXGroup;
 			children = (
-				F99E259E26D6689A00EF20FA /* AppDelegate.swift */,
-				F99E25A026D6689A00EF20FA /* SceneDelegate.swift */,
-				F99E25A226D6689A00EF20FA /* ViewController.swift */,
+				F99E25E526D6739900EF20FA /* App Delegate */,
+				F99E25E926D673AA00EF20FA /* Controllers */,
+				F99E25E126D6738D00EF20FA /* Models */,
 				F99E25A426D6689A00EF20FA /* Main.storyboard */,
 				F99E25A726D6689B00EF20FA /* Assets.xcassets */,
 				F99E25A926D6689B00EF20FA /* LaunchScreen.storyboard */,
@@ -113,7 +115,8 @@
 		F99E25B426D6689B00EF20FA /* FoodFestTests */ = {
 			isa = PBXGroup;
 			children = (
-				F99E25B526D6689B00EF20FA /* FoodFestTests.swift */,
+				F99E25F726D673C600EF20FA /* Test Controllers */,
+				F99E25F026D673BD00EF20FA /* Test Models */,
 				F99E25B726D6689B00EF20FA /* Info.plist */,
 			);
 			path = FoodFestTests;
@@ -126,6 +129,46 @@
 				F99E25C226D6689B00EF20FA /* Info.plist */,
 			);
 			path = FoodFestUITests;
+			sourceTree = "<group>";
+		};
+		F99E25E126D6738D00EF20FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F99E25D926D669B300EF20FA /* Food.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F99E25E526D6739900EF20FA /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F99E259E26D6689A00EF20FA /* AppDelegate.swift */,
+				F99E25A026D6689A00EF20FA /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		F99E25E926D673AA00EF20FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F99E25A226D6689A00EF20FA /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F99E25F026D673BD00EF20FA /* Test Models */ = {
+			isa = PBXGroup;
+			children = (
+				F99E25D426D668F700EF20FA /* FoodStructTests.swift */,
+			);
+			path = "Test Models";
+			sourceTree = "<group>";
+		};
+		F99E25F726D673C600EF20FA /* Test Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +241,7 @@
 					};
 					F99E25B026D6689B00EF20FA = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = F99E259A26D6689A00EF20FA;
 					};
 					F99E25BB26D6689B00EF20FA = {
@@ -259,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99E25A326D6689A00EF20FA /* ViewController.swift in Sources */,
+				F99E25DA26D669B300EF20FA /* Food.swift in Sources */,
 				F99E259F26D6689A00EF20FA /* AppDelegate.swift in Sources */,
 				F99E25A126D6689A00EF20FA /* SceneDelegate.swift in Sources */,
 			);
@@ -268,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F99E25B626D6689B00EF20FA /* FoodFestTests.swift in Sources */,
+				F99E25D526D668F700EF20FA /* FoodStructTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +517,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoodFestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
@@ -482,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFest.app/FoodFest";
@@ -493,6 +540,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoodFestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
