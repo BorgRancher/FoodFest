@@ -19,6 +19,8 @@ class FoodStructTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // MARK: - Initialization section
+    
     func testInit_FoodWithName() {
         let testFood = Food(name: "Pizza")
        
@@ -32,4 +34,23 @@ class FoodStructTests: XCTestCase {
         XCTAssertNotNil(testFood)
         XCTAssertEqual(testFood.restaurant, "The Cheese Factor")
     }
+    
+    // MARK: - Equatable section
+    
+    func testEquatable_ReturnsTrue() {
+        let food1 = Food(name: "Pizza")
+        let food2 = Food(name: "Pizza")
+        
+        XCTAssertEqual(food1, food2)
+    }
+    
+    
+    func testEquatable_ReturnsFalse() {
+        let food1 = Food(name: "Pizza")
+        let food2 = Food(name: "Burger")
+        
+        XCTAssertNotEqual(food1, food2)
+    }
+    
+    
 }

@@ -76,4 +76,30 @@ class FoodManagerTests: XCTestCase {
         let triedFood = sut.foodTriedAtIndex(index: 0)
         XCTAssertEqual(pizza.name, triedFood.name)
     }
+    
+    // MARK: - Clearing and resetting
+    
+    func testClearArrays_ReturnsArrayCountsOfZero() {
+        sut.addFoodToTry(food: pizza)
+        sut.addFoodToTry(food: burger)
+        sut.checkOffFoodAtIndex(index: 1)
+        
+        XCTAssertEqual(sut.foodsToTryCount, 1)
+        XCTAssertEqual(sut.foodsTriedCount, 1)
+        
+        sut.clearArrays()
+        
+        XCTAssertEqual(sut.foodsToTryCount, 0)
+        XCTAssertEqual(sut.foodsTriedCount, 0)
+    }
+    
+    // MARK: - Mark Duplicates
+    
+    func testDupllicateFoods_ShouldNotBeAddedToArray() {
+        sut.addFoodToTry(food: pizza)
+        sut.addFoodToTry(food: pizza)
+        
+        XCTAssertEqual(sut.foodsToTryCount, 1)
+    }
+    
 }

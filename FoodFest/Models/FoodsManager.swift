@@ -9,30 +9,37 @@ import Foundation
 
 class FoodsManager {
     
-    private var foodsToTry = [Food]()
+    private var foodsToTryArray = [Food]()
     var foodsToTryCount: Int {
-        foodsToTry.count
+        foodsToTryArray.count
     }
     
-    var foodsTried = [Food]()
+    var foodsTriedArray = [Food]()
     var foodsTriedCount: Int {
-        foodsTried.count
+        foodsTriedArray.count
     }
     
     func addFoodToTry(food: Food) {
-        foodsToTry.append(food)
+        if !foodsToTryArray.contains(food) {
+            foodsToTryArray.append(food)
+        }
     }
     
     func foodToTryAtIndex(index: Int) -> Food {
-        return foodsToTry[index]
+        return foodsToTryArray[index]
     }
     
     func foodTriedAtIndex(index: Int) -> Food {
-        return foodsTried[index]
+        return foodsTriedArray[index]
     }
     
     func checkOffFoodAtIndex(index: Int) {
-        foodsTried.append(foodsToTry.remove(at: index))
+        foodsTriedArray.append(foodsToTryArray.remove(at: index))
+    }
+    
+    func clearArrays() {
+        foodsTriedArray.removeAll()
+        foodsToTryArray.removeAll()
     }
     
 }

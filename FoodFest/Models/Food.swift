@@ -18,3 +18,11 @@ struct Food {
     }
     
 }
+
+extension Food: Equatable {
+    
+    static func ==(lhs: Food, rhs: Food) -> Bool {
+        lhs.name == rhs.name && lhs.restaurant == rhs.restaurant
+    }
+    
+}
