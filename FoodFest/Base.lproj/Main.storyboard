@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Library View Controller-->
         <scene sceneID="KVa-YD-Unc">
             <objects>
-                <viewController id="X7N-Ho-QSt" customClass="ViewController" customModule="MovieFest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LibraryViewController" id="X7N-Ho-QSt" customClass="LibraryViewController" customModule="FoodFest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L9U-qG-SG7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" id="Dtw-7I-2xq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCellID" id="Dtw-7I-2xq" customClass="FoodCell" customModule="FoodFest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dtw-7I-2xq" id="qhJ-qi-Gs5">
@@ -48,10 +48,13 @@
                             <constraint firstItem="eun-VT-ObC" firstAttribute="leading" secondItem="L9U-qG-SG7" secondAttribute="leadingMargin" constant="-20" id="qdA-Uv-klU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="libraryTableView" destination="eun-VT-ObC" id="GXf-F4-Z56"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBY-NL-3Pa" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="115"/>
+            <point key="canvasLocation" x="-448" y="64"/>
         </scene>
     </scenes>
     <resources>

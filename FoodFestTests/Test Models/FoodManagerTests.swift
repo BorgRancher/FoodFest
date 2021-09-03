@@ -38,13 +38,13 @@ class FoodManagerTests: XCTestCase {
     
     // MARK: - Add & Query
     func testAdd_FoodToTry_ReturnsZero() {
-        sut.addFoodToTry(food: pizza)
+        sut.addFood(food: pizza)
         
         XCTAssertEqual(sut.foodsToTryCount, 1)
     }
     
     func testQuery_ReturnsMovieAtIndex() {
-        sut.addFoodToTry(food: burger)
+        sut.addFood(food: burger)
         
         let foodQueried = sut.foodToTryAtIndex(index: 0)
         XCTAssertEqual(foodQueried.name, burger.name)
@@ -52,7 +52,7 @@ class FoodManagerTests: XCTestCase {
     
     // MARK: - Checking Off
     func testCheckOffFood_UpdatesFoodManagerCount() {
-        sut.addFoodToTry(food: eggs)
+        sut.addFood(food: eggs)
         sut.checkOffFoodAtIndex(index: 0)
         
         XCTAssertEqual(sut.foodsToTryCount, 0)
@@ -61,16 +61,16 @@ class FoodManagerTests: XCTestCase {
     
     
     func testCheckOffFood_RemovesFoodFromArray() {
-        sut.addFoodToTry(food: pizza)
-        sut.addFoodToTry(food: burger)
+        sut.addFood(food: pizza)
+        sut.addFood(food: burger)
         sut.checkOffFoodAtIndex(index: 0)
         
         XCTAssertEqual(sut.foodToTryAtIndex(index: 0).name, burger.name)
     }
     
     func testCheckOffFood_ReturnsFoodAtIndex() {
-        sut.addFoodToTry(food: pizza)
-        sut.addFoodToTry(food: burger)
+        sut.addFood(food: pizza)
+        sut.addFood(food: burger)
         sut.checkOffFoodAtIndex(index: 0)
         
         let triedFood = sut.foodTriedAtIndex(index: 0)
@@ -80,8 +80,8 @@ class FoodManagerTests: XCTestCase {
     // MARK: - Clearing and resetting
     
     func testClearArrays_ReturnsArrayCountsOfZero() {
-        sut.addFoodToTry(food: pizza)
-        sut.addFoodToTry(food: burger)
+        sut.addFood(food: pizza)
+        sut.addFood(food: burger)
         sut.checkOffFoodAtIndex(index: 1)
         
         XCTAssertEqual(sut.foodsToTryCount, 1)
@@ -96,8 +96,8 @@ class FoodManagerTests: XCTestCase {
     // MARK: - Mark Duplicates
     
     func testDupllicateFoods_ShouldNotBeAddedToArray() {
-        sut.addFoodToTry(food: pizza)
-        sut.addFoodToTry(food: pizza)
+        sut.addFood(food: pizza)
+        sut.addFood(food: pizza)
         
         XCTAssertEqual(sut.foodsToTryCount, 1)
     }

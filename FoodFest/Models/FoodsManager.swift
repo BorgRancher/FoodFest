@@ -19,7 +19,7 @@ class FoodsManager {
         foodsTriedArray.count
     }
     
-    func addFoodToTry(food: Food) {
+    func addFood(food: Food) {
         if !foodsToTryArray.contains(food) {
             foodsToTryArray.append(food)
         }
