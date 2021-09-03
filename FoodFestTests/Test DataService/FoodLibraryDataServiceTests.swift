@@ -24,7 +24,7 @@ class FoodLibraryDataServiceTests: XCTestCase {
         
         sut = FoodLibraryDataService()
         sut.foodManager = FoodsManager()
-        libraryTableView = libraryVC.libraryTableView
+        libraryTableView = libraryVC.libraryTableView 
         libraryTableView.dataSource = sut
         libraryTableView.delegate = sut
         libraryTableView.register(FoodCell.self, forCellReuseIdentifier: "foodCellID")
@@ -80,18 +80,4 @@ class FoodLibraryDataServiceTests: XCTestCase {
         _ = mock.dequeueReusableCell(withIdentifier: "foodCellID", for: IndexPath(row: 0, section: 0))
         XCTAssertTrue(mock.cellDequeuedProperly)
     }
-}
-
-extension FoodLibraryDataServiceTests {
-    
-    class TableViewMock: UITableView {
-        var cellDequeuedProperly = false
-        
-        override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
-            cellDequeuedProperly = true
-            
-            return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        }
-    }
-    
 }

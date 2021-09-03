@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		763E46A826E14EC400CBA47A /* FoodLibraryDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E46A726E14EC400CBA47A /* FoodLibraryDataServiceTests.swift */; };
 		763E46B126E1FDCB00CBA47A /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E46B026E1FDCB00CBA47A /* FoodCell.swift */; };
+		763E46BA26E2370900CBA47A /* MockExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E46B926E2370900CBA47A /* MockExtensions.swift */; };
 		767F808126E1148D00DB22F1 /* LibraryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F808026E1148D00DB22F1 /* LibraryViewControllerTests.swift */; };
 		767F808326E1180100DB22F1 /* FoodLibraryDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F808226E1180100DB22F1 /* FoodLibraryDataService.swift */; };
 		769E2ED126D6B7B0009F207A /* FoodManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E2ED026D6B7B0009F207A /* FoodManagerTests.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		763E46A726E14EC400CBA47A /* FoodLibraryDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLibraryDataServiceTests.swift; sourceTree = "<group>"; };
 		763E46B026E1FDCB00CBA47A /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		763E46B926E2370900CBA47A /* MockExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExtensions.swift; sourceTree = "<group>"; };
 		767F808026E1148D00DB22F1 /* LibraryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewControllerTests.swift; sourceTree = "<group>"; };
 		767F808226E1180100DB22F1 /* FoodLibraryDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLibraryDataService.swift; sourceTree = "<group>"; };
 		769E2ED026D6B7B0009F207A /* FoodManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodManagerTests.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		763E46B826E236FD00CBA47A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				763E46B926E2370900CBA47A /* MockExtensions.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		767F807F26E1147000DB22F1 /* Test Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		F99E25B426D6689B00EF20FA /* FoodFestTests */ = {
 			isa = PBXGroup;
 			children = (
+				763E46B826E236FD00CBA47A /* Mocks */,
 				763E46A626E14EA900CBA47A /* Test DataService */,
 				767F807F26E1147000DB22F1 /* Test Controllers */,
 				F99E25F026D673BD00EF20FA /* Test Models */,
@@ -361,6 +372,7 @@
 				769E2ED126D6B7B0009F207A /* FoodManagerTests.swift in Sources */,
 				763E46A826E14EC400CBA47A /* FoodLibraryDataServiceTests.swift in Sources */,
 				F99E25D526D668F700EF20FA /* FoodStructTests.swift in Sources */,
+				763E46BA26E2370900CBA47A /* MockExtensions.swift in Sources */,
 				767F808126E1148D00DB22F1 /* LibraryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
