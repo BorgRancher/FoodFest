@@ -20,7 +20,14 @@ class FoodLibraryDataService: NSObject, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(withIdentifier: "foodCellID", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCellID", for: indexPath) as! FoodCell
+        
+        let row = indexPath.row
+        let food = indexPath.section == 0 ? foodManager?.foodToTryAtIndex(index: row) : foodManager?.foodTriedAtIndex(index: row)
+        
+        cell.configure(food: food)
+        return cell
     }
     
     

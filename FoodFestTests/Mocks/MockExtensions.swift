@@ -15,6 +15,14 @@ extension FoodLibraryDataServiceTests {
     class TableViewMock: UITableView {
         var cellDequeuedProperly = false
         
+        class func initMock(with dataSource: FoodLibraryDataService) -> TableViewMock {
+            let mock = TableViewMock(frame: CGRect(x: 0, y: 0, width: 300, height: 500), style: .plain)
+            mock.dataSource = dataSource
+            mock.register(FoodCellMock.self, forCellReuseIdentifier: "foodCellID")
+            
+            return mock
+        }
+        
         override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
             cellDequeuedProperly = true
             
@@ -22,4 +30,13 @@ extension FoodLibraryDataServiceTests {
         }
     }
     
+    class FoodCellMock: FoodCell {
+        var foodData: Food?
+        
+        override func configure(food: Food?) {
+            self.foodData = food
+        }
+    }
+    
 }
+

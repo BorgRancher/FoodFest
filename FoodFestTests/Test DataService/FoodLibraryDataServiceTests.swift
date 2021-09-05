@@ -16,6 +16,9 @@ class FoodLibraryDataServiceTests: XCTestCase {
     let pizza = Food(name: "Pizza")
     let burger = Food(name: "Burger")
     let fries = Food(name: "Fries")
+    let eggs = Food(name: "Eggs")
+    
+    var tableViewMock: TableViewMock!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,6 +31,8 @@ class FoodLibraryDataServiceTests: XCTestCase {
         libraryTableView.dataSource = sut
         libraryTableView.delegate = sut
         libraryTableView.register(FoodCell.self, forCellReuseIdentifier: "foodCellID")
+        
+        tableViewMock = TableViewMock.initMock(with: sut)
     }
 
     override func tearDownWithError() throws {
@@ -74,10 +79,29 @@ class FoodLibraryDataServiceTests: XCTestCase {
     }
     
     func testCell_ShouldDequeueCell() {
-        let mock = TableViewMock()
-        mock.dataSource = sut
-        mock.register(FoodCell.self, forCellReuseIdentifier: "foodCellID")
-        _ = mock.dequeueReusableCell(withIdentifier: "foodCellID", for: IndexPath(row: 0, section: 0))
-        XCTAssertTrue(mock.cellDequeuedProperly)
+        _ = tableViewMock.dequeueReusableCell(withIdentifier: "foodCellID", for: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(tableViewMock.cellDequeuedProperly)
+    }
+    
+    func testCell_SectionOne_ShouldSetCellData() {
+        sut.foodManager?.addFood(food: pizza)
+        tableViewMock.reloadData()
+        
+        let cell = tableViewMock.cellForRow(at: IndexPath(row: 0, section: 0)) as! FoodCellMock
+//        cell.configFoodCell(food: pizza)
+        XCTAssertEqual(cell.foodData, pizza)
+    }
+    
+    func testCell_SectionTwoConfig_ShouldSetCellData() {
+        sut.foodManager?.addFood(food: pizza)
+        sut.foodManager?.addFood(food: burger)
+
+        sut.foodManager?.checkOffFoodAtIndex(index: 0)
+        
+        tableViewMock.reloadData()
+        
+        let cell = tableViewMock.cellForRow(at: IndexPath(row: 0, section: 1)) as! FoodCellMock
+        
+        XCTAssertEqual(cell.foodData, pizza)
     }
 }
