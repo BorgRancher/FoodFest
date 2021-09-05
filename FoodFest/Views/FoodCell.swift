@@ -15,7 +15,8 @@ class FoodCell: UITableViewCell {
     }
 
     func configure(food: Food?) {
-        
+        textLabel?.text = food?.name
+        detailTextLabel?.text = food?.restaurant
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

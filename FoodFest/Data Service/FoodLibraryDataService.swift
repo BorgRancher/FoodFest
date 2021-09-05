@@ -30,5 +30,10 @@ class FoodLibraryDataService: NSObject, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            foodManager?.checkOffFoodAtIndex(index: indexPath.row)
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 }
