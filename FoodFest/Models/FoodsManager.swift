@@ -34,7 +34,9 @@ class FoodsManager {
     }
     
     func checkOffFoodAtIndex(index: Int) {
-        foodsTriedArray.append(foodsToTryArray.remove(at: index))
+        if foodsToTryCount > 0 {
+            foodsTriedArray.append(foodsToTryArray.remove(at: index))
+        }
     }
     
     func clearArrays() {

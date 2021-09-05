@@ -31,9 +31,15 @@ class FoodLibraryDataService: NSObject, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             foodManager?.checkOffFoodAtIndex(index: indexPath.row)
+//            tableView.insertRows(at: [indexPath], with: .automatic)
+            // FIXME: Do not relaod entire TV
+            tableView.reloadData()
         }
-        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        section == 0 ? "Foods to Try" : "Foods Tried"
     }
 }
