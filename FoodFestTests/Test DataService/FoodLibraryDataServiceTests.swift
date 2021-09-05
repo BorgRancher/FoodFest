@@ -106,14 +106,14 @@ class FoodLibraryDataServiceTests: XCTestCase {
     }
     
     func testCell_Selection_ShouldCheckOffSelectedMovie() {
-//        sut.foodManager?.addFood(food: pizza)
-//        sut.foodManager?.addFood(food: fries)
-//        libraryTableView.delegate?.tableView?(libraryTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-//        
-//        XCTAssertEqual(sut.foodManager?.foodsToTryCount, 1)
-//        XCTAssertEqual(sut.foodManager?.foodsTriedCount, 1)
-//        XCTAssertEqual(libraryTableView.numberOfRows(inSection: 0), 1)
-//        XCTAssertEqual(libraryTableView.numberOfRows(inSection: 1), 1)
+        sut.foodManager?.addFood(food: pizza)
+        sut.foodManager?.addFood(food: fries)
+        libraryTableView.delegate?.tableView?(libraryTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(sut.foodManager?.foodsToTryCount, 1)
+        XCTAssertEqual(sut.foodManager?.foodsTriedCount, 1)
+        XCTAssertEqual(libraryTableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(libraryTableView.numberOfRows(inSection: 1), 1)
     }
     
     func testTableViewSectionTitles_ShouldCorrectStringValues() {
