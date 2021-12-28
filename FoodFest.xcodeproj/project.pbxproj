@@ -16,7 +16,6 @@
 		769E2ED126D6B7B0009F207A /* FoodManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E2ED026D6B7B0009F207A /* FoodManagerTests.swift */; };
 		769E2ED326D6B8C5009F207A /* FoodsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769E2ED226D6B8C5009F207A /* FoodsManager.swift */; };
 		F99E259F26D6689A00EF20FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E259E26D6689A00EF20FA /* AppDelegate.swift */; };
-		F99E25A126D6689A00EF20FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25A026D6689A00EF20FA /* SceneDelegate.swift */; };
 		F99E25A326D6689A00EF20FA /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99E25A226D6689A00EF20FA /* LibraryViewController.swift */; };
 		F99E25A626D6689A00EF20FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99E25A426D6689A00EF20FA /* Main.storyboard */; };
 		F99E25A826D6689B00EF20FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99E25A726D6689B00EF20FA /* Assets.xcassets */; };
@@ -54,7 +53,6 @@
 		769E2ED226D6B8C5009F207A /* FoodsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsManager.swift; sourceTree = "<group>"; };
 		F99E259B26D6689A00EF20FA /* FoodFest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodFest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99E259E26D6689A00EF20FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F99E25A026D6689A00EF20FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F99E25A226D6689A00EF20FA /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		F99E25A526D6689A00EF20FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F99E25A726D6689B00EF20FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				F99E259E26D6689A00EF20FA /* AppDelegate.swift */,
-				F99E25A026D6689A00EF20FA /* SceneDelegate.swift */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
@@ -369,7 +366,6 @@
 				F99E25A326D6689A00EF20FA /* LibraryViewController.swift in Sources */,
 				F99E25DA26D669B300EF20FA /* Food.swift in Sources */,
 				F99E259F26D6689A00EF20FA /* AppDelegate.swift in Sources */,
-				F99E25A126D6689A00EF20FA /* SceneDelegate.swift in Sources */,
 				763E46B126E1FDCB00CBA47A /* FoodCell.swift in Sources */,
 				767F808326E1180100DB22F1 /* FoodLibraryDataService.swift in Sources */,
 				769E2ED326D6B8C5009F207A /* FoodsManager.swift in Sources */,
@@ -483,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -538,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -553,14 +549,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takasur.FoodFest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -571,14 +569,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.takasur.FoodFest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -590,7 +590,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,6 +603,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -613,7 +618,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -623,6 +631,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodFest.app/FoodFest";
@@ -633,7 +643,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -642,6 +654,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FoodFest;
@@ -652,7 +666,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FoodFestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +677,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtbc.takasur.FoodFestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FoodFest;
